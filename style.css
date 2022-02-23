@@ -21,7 +21,7 @@
   #navbar {
     display: flex;
     justify-content: flex-end;
-    background-color: #525252;
+    background-color: var(--Teal-Dark-5-hex)
     position: fixed;
     top: 0;
     left: 0;
@@ -35,7 +35,7 @@
   
   .navlist a {
     display: block;
-    color: var(--main-white);
+    color: var(--Teal-Dark-2-hex);
     padding: 1rem;
     font-size: xx-large;
   }
@@ -58,7 +58,7 @@
   }
   
   h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     padding: 3rem;
     color: var(--Teal-Dark-2-hex);
   }
@@ -115,7 +115,7 @@
   .contact-details {
     color: var(--Teal-Dark-5-hex);
   
-    text-shadow: 2px 2px 1px #1f1f1f;
+    text-shadow: 2px 2px 1px hsl(0, 38%, 28%);
     transition: transform 0.3s ease-out;
   }
   
@@ -130,17 +130,15 @@
     background-color: var(--Teal-Dark-4-hex);
   }
   
-  /* 980px / 16px = 61.25em */
   @media (max-width: 61.25em) {
     html {
       font-size: 60%;
     }
   }
   
-  /* 640px / 16px = 40em */
   @media (max-width: 40em) {
     html {
       font-size: 50%;
-      color: rgb(63, 35, 190);
+      color: rgb(119, 119, 119);
     }
   }
