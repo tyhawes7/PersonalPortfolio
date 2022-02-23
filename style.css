@@ -1,9 +1,9 @@
 :root {
-    --main-white: #ff0000;
+    --main-white: #ce0000;
     --main-blue: #808080;
     --Teal-Dark-1-hex: #000000;
     --Teal-Dark-2-hex: #636363;
-    --Teal-Dark-3-hex: #ff0000;
+    --Teal-Dark-3-hex: #c70000;
     --Teal-Dark-4-hex: #c9c9c9;
     --Teal-Dark-5-hex: #4b4b4b;
   }
@@ -21,11 +21,8 @@
   #navbar {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--Teal-Dark-5-hex)
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    background-color: var(--Teal-Dark-4-hex)
+   
   }
   
   .navlist {
@@ -35,7 +32,7 @@
   
   .navlist a {
     display: block;
-    color: var(--Teal-Dark-2-hex);
+    color: var(--main-white);
     padding: 1rem;
     font-size: xx-large;
   }
@@ -50,7 +47,7 @@
   
   #welcome-section {
     height: 100vh;
-    background-color: #ff0000;
+    background-color: #ff5959;
     display: flex;
     justify-content: center;
     align-items: center;
