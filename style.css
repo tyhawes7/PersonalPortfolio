@@ -1,6 +1,11 @@
 :root {
     --main-white: #ff0000;
     --main-blue: #808080;
+    --Teal-Dark-1-hex: #000000;
+    --Teal-Dark-2-hex: #636363;
+    --Teal-Dark-3-hex: #ff0000;
+    --Teal-Dark-4-hex: #c9c9c9;
+    --Teal-Dark-5-hex: #4b4b4b;
   }
   
   * {
@@ -32,6 +37,7 @@
     display: block;
     color: var(--main-white);
     padding: 1rem;
+    font-size: xx-large;
   }
   
   .navlist a:hover {
@@ -44,14 +50,84 @@
   
   #welcome-section {
     height: 100vh;
-    background-color: rgb(109, 37, 224);
+    background-color: #ff0000;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--Teal-Dark-5-hex);
   }
   
   h1 {
     font-size: 5rem;
+    padding: 3rem;
+    color: var(--Teal-Dark-2-hex);
+  }
+  
+  #projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--Teal-Dark-2-hex);
+  }
+  
+  .project-tiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .project-tiles a {
+    margin: 2rem;
+  }
+  
+  .project-tile img {
+    width: 20rem;
+  }
+  
+  figcaption {
+    font-size: x-large;
+    text-align: center;
+    background-color: var(--Teal-Dark-5-hex);
+    border-radius: 2px 2px 6px 6px;
+  }
+  
+  #contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--Teal-Dark-4-hex);
+  }
+  
+  #contact h1 {
+    color: var(--Teal-Dark-1-hex);
+  }
+  
+  .contact-links {
+    display: flex;
+  }
+  
+  .contact-links a {
+    display: block;
+    font-size: xx-large;
+    padding: 3rem;
+  }
+  
+  .contact-details {
+    color: var(--Teal-Dark-5-hex);
+  
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .contact-details:hover {
+    transform: translateY(8px);
+  }
+  
+  footer {
+    font-size: large;
+    text-align: center;
+    padding: 3rem;
+    background-color: var(--Teal-Dark-4-hex);
   }
   
   /* 980px / 16px = 61.25em */
