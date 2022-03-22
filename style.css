@@ -21,8 +21,11 @@
   #navbar {
     display: flex;
     justify-content: flex-end;
-    background-color: var(--Teal-Dark-4-hex)
-   
+    background-color: var(grey);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
   
   .navlist {
@@ -34,7 +37,7 @@
     display: block;
     color: var(--main-white);
     padding: 1rem;
-    font-size: xx-large;
+    font-size: x-large;
   }
   
   .navlist a:hover {
@@ -51,13 +54,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--Teal-Dark-5-hex);
+    color: var(grey);
   }
   
   h1 {
     font-size: 4rem;
     padding: 3rem;
-    color: var(--Teal-Dark-2-hex);
+    color: var(blue);
   }
   
   #projects {
@@ -84,7 +87,7 @@
   figcaption {
     font-size: x-large;
     text-align: center;
-    background-color: var(--Teal-Dark-5-hex);
+    background-color: var(--Teal-Dark-4-hex);
     border-radius: 2px 2px 6px 6px;
   }
   
@@ -105,12 +108,12 @@
   
   .contact-links a {
     display: block;
-    font-size: xx-large;
+    font-size: x-large;
     padding: 3rem;
   }
   
   .contact-details {
-    color: var(--Teal-Dark-5-hex);
+    color: var(--Teal-Dark-2-hex);
   
     text-shadow: 2px 2px 1px hsl(0, 38%, 28%);
     transition: transform 0.3s ease-out;
