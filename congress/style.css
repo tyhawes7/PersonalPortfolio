@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(236, 236, 236);
+    
+}
+
+.senatorsDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+  
+  header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    color: #2C3359;
+  }
+
+  figure img {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    margin: 1rem;
+    border-style:double;
+    border-color: #2C3359;
+    border-width: .5rem;
+  }
+  
+  figCaption {
+    text-align: center;
+    display: block;
+    padding: .2rem;
+    margin: 0px 15px 20px 15px;
+    font-size: large;
+    text-align: center;
+    color: #f0f0f0;
+    background-image: linear-gradient(#317cdd, #2C3359);
+    border-radius: 5px;
+
+  }
+
+  footer {
+    text-align: center;
+    padding: 3rem;
+    color: #2C3359;
+  }
