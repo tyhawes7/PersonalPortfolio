@@ -8,6 +8,8 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFqQj3zcWzyTB_QSwxQCC4JlFKAs_x717FTw&usqp=CAU);
+  
   }
   header{
     display: flex;
