@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+   
+}
+
+img{
+    height: 100vh;
+    max-width: fit-content;
+}
+
+h1 {
+    text-align: center;
+    font-size: xx-large;
+    color: #D2D8D9;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: #dc5d5d;
+
+}
+
+body {
+    background-color: #343434;
+}
+
+.mainContainer {
+    display: flex;
+
+}
+
+.shipViewer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 4rem;
+}
+
+.shipViewer img{
+    padding: 2rem;
+}
+
+
+.box {
+    background-color: #ff1111;
+    color: #7c5454;
+  }
+  
+.box p {
+    font-size: xx-large;
+    text-align: center;
+  }
+
+.nav {
+    min-width: 20rem;
+}
+.navList {
+    margin: 1rem;
+    list-style-type: none;
+    font-size: x-large;
+}
+
+a {
+    text-decoration: none;
+    color: #D2D8D9;
+}
+a:hover{
+    color: #ff0000;
+}
+li {
+    background-color: #ff7c7c;
+}
+
+li:hover{
+    background: #7b3737;
+    color: red;
+}
+
+footer {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 1rem;
+}

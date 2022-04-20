@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+main{
+    background-image: url(https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/masters/city.jpg);
+    background-color: #fff12a;
+  }
+  .pokelogo {
+    display: flex;
+    justify-content: center;
+  }
+
+  .pokelogo img {
+    width: 25%;
+    height: 15%;
+    margin-top: 1rem;
+  }
+
+  h1 {
+    text-align: center;
+    color: #1c4e9f;
+    font-family: verdana;
+		text-transform: uppercase;
+    font-size: 3rem;
+    margin: 0;
+    -webkit-text-stroke: 2px #ffcb05;
+  }
+
+
+.pokegrid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.scene {
+    width: 200px;
+    height: 260px;
+}
+
+figure img {
+    width: 200px;
+}
