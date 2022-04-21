@@ -4,7 +4,7 @@
 }
 main{
     background-image: url(https://assets.pokemon.com//assets/cms2/img/misc/virtual-backgrounds/masters/city.jpg);
-    background-color: #fff12a;
+    background-color: #26ff00;
   }
   .pokelogo {
     display: flex;
@@ -19,25 +19,144 @@ main{
 
   h1 {
     text-align: center;
-    color: #1c4e9f;
+    color: #8681ab;
     font-family: verdana;
 		text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 5rem;
     margin: 0;
-    -webkit-text-stroke: 2px #ffcb05;
+    -webkit-text-stroke: 2px #a350e3;
   }
 
+  .pokemon-title img{
+    width: 25%;
+    height: 15%;
+    margin-top: 1rem;
+  }
 
+  .card {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    /* position: relative; */
+    border-style:solid;
+    border-color: #33d721;
+    border-width: .2rem;
+
+  }
+  .card.is-flipped {
+    transform: rotateY(180deg);
+  }
 .pokegrid {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 }
+
 
 .scene {
     width: 200px;
     height: 260px;
+    perspective: 600px;
+    margin: 1em;
+}
+
+.cardFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 5px;
+    border-style:solid;
+    border-color: #FFCC00;
+    border-width: .2rem;
+}
+
+.front {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-transform: capitalize;
+  font-size: x-large;
+  font-family: sans-serif;
+}
+
+.back {
+  background: rgb(25, 255, 152);
+  transform: rotateY(180deg);
+}
+.back h4 { 
+  text-align: center;
+  margin-top: .6rem;
+  color: #bebebe;
+  font-family: sans-serif;
+  font-size: small;
+}
+.back dl {
+  color: #64faff;
+  margin: 0;
+  text-transform:uppercase;
+  font-family: verdana;
+  text-align: center;
+  margin-bottom: .5rem;
+  font-size: small;
+}
+
+.back ul {
+  color: #fda745;
+  text-transform: capitalize;
+  list-style-type:circle;
+  margin: 0;
+  font-family: sans-serif;
+  margin-bottom: .5rem;
+  font-size: small;
+}
+
+.back h5 {
+  color: #ffffff;
+  text-align: center;
+  font-size: small;
+  font-family: sans-serif;
+  
+}
+figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+figcaption {
+  margin-bottom: .5rem;
 }
 
 figure img {
     width: 200px;
+}
+header{
+  /* background-image: url(https://images4.alphacoders.com/574/574726.jpg);*/
+  background-color: #000000;
+}
+
+ header button .type-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.type-selector{
+  width: 15rem;
+  height: 3rem;
+  margin: 2rem;
+  border: 2px solid #ffcb05;
+  border-radius: .3rem;
+  background-image: linear-gradient(#3564ae, #183e76);
+  color: #ffcb05;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-size: medium;
+} 
+
+.type-selector:hover {
+  box-shadow: 0px 0px 15px #ffcb05;
 }
