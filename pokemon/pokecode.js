@@ -9,7 +9,6 @@ const getAPIData = async (url) => {
     }
   }
 
-
   class Pokemon {
     constructor(name, height, weight, abilities, types, moves) {
       this.id = 9001,
@@ -24,14 +23,49 @@ const getAPIData = async (url) => {
   
   const pokeHeader = document.querySelector('header')
   const pokeGrid = document.querySelector('.pokegrid')
-  const newButton = document.createElement('button')  
+  const newButton = document.createElement('button')
+ 
 
-  async function loadPokemon(offset = 0, limit = 20) {
-    const data = await getAPIData('https://pokeapi.co/api/v2/pokemon/')
+  newButton.textContent = 'New Pokemon'
+  pokeHeader.appendChild(newButton)
+  newButton.addEventListener('click', () => {
+    
+
+    const newPokemon = new Pokemon(
+      pokeName, 
+      makeTypesArray(pokeTypes),
+      pokeHeight, 
+      pokeWeight,
+      makeMovesArray(pokeMoves))
+      makeAbilitiesArray(pokeAbilities), 
+      console.log(newPokemon)
+      populatePokeCard(newPokemon)
+  })
+
+  function makeAbilitiesArray(commaString) { 
+    return commaString.split(',').map((abilityName) => {
+      return { ability: { name: abilityName } }
+    })
+    }
+    
+  function makeTypesArray(spacedString) { 
+    return spacedString.split(' ').map((typeName) => {
+      return { type: { name: typeName } }
+    })
+    }
+
+ function makeMovesArray(spacedString) { 
+   return spacedString.split('').map((movesName)=> {
+          return { type: { name: movesName}}
+    })
+  }
+
+  const loadedPokemon = []
+
+  async function loadPokemon(offset = 0, limit = 25) {
+    const data = await getAPIData(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`)
     for (const nameAndUrl of data.results) {
       const singlePokemon = await getAPIData(nameAndUrl.url)
-
-
       const simplifiedPokemon = {
         id: singlePokemon.id,
         height: singlePokemon.height,
@@ -40,12 +74,11 @@ const getAPIData = async (url) => {
         abilities: singlePokemon.abilities,
         types: singlePokemon.types,
         moves: singlePokemon.moves.slice(0, 3),
-    }
-    loadedPokemon.push(simplifiedPokemon)
-    populatePokeCard(simplifiedPokemon)
+      } 
+      loadedPokemon.push(simplifiedPokemon)
+      populatePokeCard(simplifiedPokemon)
     }
   }
-  
   
   function populatePokeCard(pokemon) {
     const pokeScene = document.createElement('div')
@@ -53,7 +86,6 @@ const getAPIData = async (url) => {
     const pokeCard = document.createElement('div')
     pokeCard.className = 'card'
     pokeCard.addEventListener('click', () => pokeCard.classList.toggle('is-flipped'))
-    // populate the front of the card
     pokeCard.appendChild(populateCardFront(pokemon))
     pokeCard.appendChild(populateCardBack(pokemon))
     pokeScene.appendChild(pokeCard)
@@ -62,9 +94,8 @@ const getAPIData = async (url) => {
   
   function populateCardFront(pokemon) {
     const pokeFront = document.createElement('figure')
-    pokeFront.className = 'cardFace'
-    pokeImg.src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png`
-    pokeCaption.textContent = pokemon.name
+    pokeFront.className = 'cardFace front'
+
     const pokeType = pokemon.types[0].type.name
     const pokeType2 = pokemon.types[1]?.type.name
      console.log(pokeType, pokeType2)
@@ -94,7 +125,7 @@ const getAPIData = async (url) => {
     pokeBack.className = 'cardFace back'
 
     const typeLabel = document.createElement("h4");
-    typeLabel.textContent = "Types";
+    typeLabel.textContent = "Type";
     pokeBack.appendChild(typeLabel);
 
     const typesList = document.createElement('dl')
@@ -221,13 +252,11 @@ const getAPIData = async (url) => {
   await loadPokemon(0, 150)
 
   console.log(filterPokemonByType('grass'))
-// not figured out yet what the UI might be for sorted/filtered pokemon...
 
 const selectType = document.querySelector('.type-selector');
 selectType.addEventListener('change', (event) => {
   console.log(`You like ${event.target.value}`);
   const filteredByType = filterPokemonByType(event.target.value)
-  // array of pokemon filtered by their type
-  removeChildren(pokeGrid) // clears out the main grid of pokemon displayed
+  removeChildren(pokeGrid) 
   filteredByType.forEach(pokemon => populatePokeCard(pokemon))
 })

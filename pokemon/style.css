@@ -46,7 +46,7 @@ main{
 
   }
   .card.is-flipped {
-    transform: rotateY(180deg);
+    transform: rotatey(540deg);
   }
 .pokegrid {
     display: flex;
@@ -93,7 +93,7 @@ main{
   font-size: small;
 }
 .back dl {
-  color: #64faff;
+  color: #5c1cff;
   margin: 0;
   text-transform:uppercase;
   font-family: verdana;
@@ -113,7 +113,7 @@ main{
 }
 
 .back h5 {
-  color: #ffffff;
+  color: #000000;
   text-align: center;
   font-size: small;
   font-family: sans-serif;
