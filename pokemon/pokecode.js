@@ -23,6 +23,9 @@ const getAPIData = async (url) => {
   
   const pokeHeader = document.querySelector('header')
   const pokeGrid = document.querySelector('.pokegrid')
+  const loadButton = document.createElement('button')
+  loadButton.contex
+  
   const newButton = document.createElement('button')
  
 
