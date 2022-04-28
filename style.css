@@ -81,14 +81,15 @@
   }
   
   .project-tile img {
-    width: 20rem;
+    width: 25rem;
+    height: 21rem;
   }
   
   figcaption {
     font-size: x-large;
     text-align: center;
     background-color: var(--Teal-Dark-4-hex);
-    border-radius: 2px 2px 6px 6px;
+    border-radius: 3px 3px 5px 5px;
   }
   
   #contact {
@@ -141,4 +142,9 @@
       font-size: 50%;
       color: rgb(119, 119, 119);
     }
+  }
+
+  #interestpage-img{
+    width: 10rem;
+    height: 6rem;
   }
