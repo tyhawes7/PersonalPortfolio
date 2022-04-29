@@ -179,7 +179,6 @@ const getAPIData = async (url) => {
 
   
   function getPokeTypeColor(pokeType) {
-    // if(pokeType === 'grass') return '#00FF00'
     let color
     switch (pokeType) {
       case 'grass':
